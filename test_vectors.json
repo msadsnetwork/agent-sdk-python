@@ -1,0 +1,35 @@
+{
+    "algorithm": "v1 = hex(HMAC_SHA256(secret, ts\\n nonce\\n METHOD\\n /path\\n sha256_hex(body)))",
+    "vectors": [
+        {
+            "secret": "mss_test_secret_0123456789abcdef0123456789abcdef0123",
+            "timestamp": "1760864400",
+            "nonce": "n0nce_0000000001",
+            "method": "POST",
+            "path": "/api/v1/agent-exchange/offers",
+            "body": "{\"unit\":\"msads_abcdefabcdef\",\"test\":true,\"intent\":{\"category\":\"electronics.laptops\"}}",
+            "string_to_sign_sha256": "045646f7266fc24a86aa5337bbc7416aaa0f25602c88bf24b813a55fad71df74",
+            "signature": "v1=8f4bd457e2560586d32a34ef41008438ff8cb1bf9f3b4a59e683e1200a94325c"
+        },
+        {
+            "secret": "mss_another_secret_value_xyz",
+            "timestamp": "1760868000",
+            "nonce": "Zx9-_abcdefghijklmnop",
+            "method": "POST",
+            "path": "/api/v1/agent-exchange/events",
+            "body": "{\"offer_ref\":\"axo_abc\",\"event\":\"impression\",\"idempotency_key\":\"imp-1\"}",
+            "string_to_sign_sha256": "5d9d3a414473b3101028cbb0b369c94a0d6b3b8833c6424e445a84072f388881",
+            "signature": "v1=d4aee051f4d5979e0b00f338f943da6c786e4f674d21a27ec2b97b7e0489a2ed"
+        },
+        {
+            "secret": "s",
+            "timestamp": "0",
+            "nonce": "aaaaaaaaaaaaaaaa",
+            "method": "post",
+            "path": "api/v1/agent-exchange/mcp",
+            "body": "",
+            "string_to_sign_sha256": "eb218a2beab17968d6f67bf466e0593fddc313460db389d11e372aee97967e46",
+            "signature": "v1=52e807e957cb65c91b86b630cc8ac871030e2dc0200ce6e57bae58dac629100c"
+        }
+    ]
+}

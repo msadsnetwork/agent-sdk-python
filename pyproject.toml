@@ -1,0 +1,17 @@
+[project]
+name = "msads-agent"
+version = "0.1.0"
+description = "MS Ads Agent Exchange server SDK (offers, events, HMAC request signing)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "MS TECH IT PRIVATE LIMITED", email = "partner@msadsnetwork.com" }]
+requires-python = ">=3.8"
+dependencies = []
+[project.urls]
+Homepage = "https://docs.msadsnetwork.com"
+Source = "https://github.com/msadsnetwork/agent-sdk-python"
+[tool.setuptools]
+packages = ["msads_agent"]
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
